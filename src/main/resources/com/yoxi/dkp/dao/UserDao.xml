@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.yoxi.dkp.dao.UserDao">
+
+    <select id="getAllUser" resultType="com.yoxi.dkp.entity.User">
+        SELECT * FROM user
+    </select>
+
+    <select id="login" parameterType="string" resultType="string">
+        SELECT password FROM user where name = #{name}
+    </select>
+
+    <select id="getAllDkp" resultType="com.yoxi.dkp.entity.Dkp">
+        SELECT * FROM dkp
+    </select>
+
+</mapper>
